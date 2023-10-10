@@ -4,10 +4,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-function Navibar() {
+function TopBar() {
     const [showAboutDropdown, setShowAboutDropdown] = useState(false);
-    const [showSideDropdown, setShowSideDropdown] = useState(false);
-
     const handleAboutMouseEnter = () => {
         setShowAboutDropdown(true);
     };
@@ -16,53 +14,38 @@ function Navibar() {
         setShowAboutDropdown(false);
     };
 
-    const handleSideMouseEnter = () => {
-        setShowSideDropdown(true);
+    const customStyle = {
+        backgroundColor: 'oldlace', // 원하는 배경색으로 변경하세요
     };
-
-    const handleSideMouseLeave = () => {
-        setShowSideDropdown(false);
-    };
-
-
 
     return (
-        <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+        <Navbar
+            collapseOnSelect expand="lg"
+            style={customStyle}
+        >
             <Container>
-                <Navbar.Brand href="#home">Team Muzik</Navbar.Brand>
+                <Navbar.Brand href="#home">Subin_Dev</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#features">HOME</Nav.Link>
                         <NavDropdown
-                            title="ABOUT"
+                            title="About"
                             id="collapsible-nav-dropdown"
                             show={showAboutDropdown}
                             onMouseEnter={handleAboutMouseEnter}
                             onMouseLeave={handleAboutMouseLeave}
                         >
-                            <NavDropdown.Item href="#action/3.1">CREW</NavDropdown.Item>
+                            <NavDropdown.Item
+                                href="https://www.muzik.click/"
+                            >SUBIN</NavDropdown.Item>
+                            <NavDropdown.Item
+                                href="https://www.muzik.click/"
+                            >MUZIK</NavDropdown.Item>
                         </NavDropdown>
-                        <NavDropdown
-                            title="SIDE"
-                            id="collapsible-nav-dropdown"
-                            show={showSideDropdown}
-                            onMouseEnter={handleSideMouseEnter}
-                            onMouseLeave={handleSideMouseLeave}
-                        >
-                            <NavDropdown.Item href="#action/3.1">START</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.1">INSPIRE</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.1">DREAM</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.1">EXPLORE</NavDropdown.Item>
-                        </NavDropdown>
-                        <Nav.Link href="#features">SHOP</Nav.Link>
-                        <Nav.Link href="#features">NEWSLETTER</Nav.Link>
+                        <Nav.Link href="#features">Links</Nav.Link>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#deets">LOGIN</Nav.Link>
-                        <Nav.Link href="#deets">SIGNUP</Nav.Link>
-                        <Nav.Link href="#deets">JOIN</Nav.Link>
-                        <Nav.Link href="#deets">MY</Nav.Link>
+                        <Nav.Link href="https://open.kakao.com/o/shXnTOxf">JOIN</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
@@ -70,4 +53,4 @@ function Navibar() {
     );
 }
 
-export default Navibar;
+export default TopBar;

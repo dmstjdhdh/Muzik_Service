@@ -2,9 +2,10 @@ import './App.css';
 import styled from "styled-components";
 import Home from "./components/home";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navibar from "./components/navibar";
+import TopBar from "./components/navibar";
 
 const Container = styled.div`
+  background-color: #ecedee;
   padding: 0;
   margin: 0;
 `;
@@ -12,7 +13,7 @@ const Container = styled.div`
 function App() {
   return (
       <Container>
-          <Navibar/>
+          <TopBar/>
           <Home/>
       </Container>
   );
