@@ -7,8 +7,6 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 function Navibar() {
     const [showAboutDropdown, setShowAboutDropdown] = useState(false);
     const [showSideDropdown, setShowSideDropdown] = useState(false);
-    const [showArticleDropdown, setShowArticleDropdown] = useState(false);
-    const [showCommunityDropdown, setShowCommunityDropdown] = useState(false);
 
     const handleAboutMouseEnter = () => {
         setShowAboutDropdown(true);
@@ -26,21 +24,7 @@ function Navibar() {
         setShowSideDropdown(false);
     };
 
-    const handleArticleMouseEnter = () => {
-        setShowArticleDropdown(true);
-    };
 
-    const handleArticleMouseLeave = () => {
-        setShowArticleDropdown(false);
-    };
-
-    const handleCommunityMouseEnter = () => {
-        setShowCommunityDropdown(true);
-    };
-
-    const handleCommunityMouseLeave = () => {
-        setShowCommunityDropdown(false);
-    };
 
     return (
         <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
