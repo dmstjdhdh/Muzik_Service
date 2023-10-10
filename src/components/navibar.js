@@ -1,9 +1,47 @@
+import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function Navibar() {
+    const [showAboutDropdown, setShowAboutDropdown] = useState(false);
+    const [showSideDropdown, setShowSideDropdown] = useState(false);
+    const [showArticleDropdown, setShowArticleDropdown] = useState(false);
+    const [showCommunityDropdown, setShowCommunityDropdown] = useState(false);
+
+    const handleAboutMouseEnter = () => {
+        setShowAboutDropdown(true);
+    };
+
+    const handleAboutMouseLeave = () => {
+        setShowAboutDropdown(false);
+    };
+
+    const handleSideMouseEnter = () => {
+        setShowSideDropdown(true);
+    };
+
+    const handleSideMouseLeave = () => {
+        setShowSideDropdown(false);
+    };
+
+    const handleArticleMouseEnter = () => {
+        setShowArticleDropdown(true);
+    };
+
+    const handleArticleMouseLeave = () => {
+        setShowArticleDropdown(false);
+    };
+
+    const handleCommunityMouseEnter = () => {
+        setShowCommunityDropdown(true);
+    };
+
+    const handleCommunityMouseLeave = () => {
+        setShowCommunityDropdown(false);
+    };
+
     return (
         <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
             <Container>
@@ -12,50 +50,26 @@ function Navibar() {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="#features">HOME</Nav.Link>
-                        <NavDropdown title="ABOUT" id="collapsible-nav-dropdown">
+                        <NavDropdown
+                            title="ABOUT"
+                            id="collapsible-nav-dropdown"
+                            show={showAboutDropdown}
+                            onMouseEnter={handleAboutMouseEnter}
+                            onMouseLeave={handleAboutMouseLeave}
+                        >
                             <NavDropdown.Item href="#action/3.1">CREW</NavDropdown.Item>
                         </NavDropdown>
-                        <NavDropdown title="SIDE" id="collapsible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">
-                                START
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                INSPIRE
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">
-                                DREAM
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.4">
-                                EXPLORE
-                            </NavDropdown.Item>
-                        </NavDropdown>
-                        <NavDropdown title="ARTICLE" id="collapsible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">
-                                START
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                INSPIRE
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">
-                                DREAM
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.4">
-                                EXPLORE
-                            </NavDropdown.Item>
-                        </NavDropdown>
-                        <NavDropdown title="COMMUNITY" id="collapsible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">
-                                START
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                INSPIRE
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">
-                                DREAM
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.4">
-                                EXPLORE
-                            </NavDropdown.Item>
+                        <NavDropdown
+                            title="SIDE"
+                            id="collapsible-nav-dropdown"
+                            show={showSideDropdown}
+                            onMouseEnter={handleSideMouseEnter}
+                            onMouseLeave={handleSideMouseLeave}
+                        >
+                            <NavDropdown.Item href="#action/3.1">START</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.1">INSPIRE</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.1">DREAM</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.1">EXPLORE</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href="#features">SHOP</Nav.Link>
                         <Nav.Link href="#features">NEWSLETTER</Nav.Link>
