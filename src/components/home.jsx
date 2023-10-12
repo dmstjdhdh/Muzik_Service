@@ -1,89 +1,97 @@
 import React from 'react';
 import styled from 'styled-components';
-import Container from "react-bootstrap/Container";
-import {Col, Row} from "react-bootstrap";
 
-const Container_parent = styled.div`
+const ContainerParent = styled.div`
   background-color: white;
-`
-const Container_styled = styled.div`
-  display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 300px;
 `;
 
-const Partition = styled.div`
-  padding: 20px;
+const ProfileContent = styled.div`
+  background: #845EC2;
+  background: -webkit-linear-gradient(to left, #B39CD0, #FBEAFF);
+
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const ImageBox = styled.img`
+  flex: 1;
+  border-radius: 150px;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  margin-left: 100px;
+  z-index: 3;
 `
-const LeftContent = styled.div`
+
+const ImageStackContainer = styled.div`
+  flex-direction: row;
+`
+const ImageStack = styled.img`
+  width: 48px;
+  height: 48px;
+  margin: 20px;
+`
+
+const TextContent = styled.div`
   flex: 1;
+  text-align: left;
+  width: 100%;
+  height: 500px;
+  flex-direction: column;
+  margin-left: 100px;
+  margin-top: 100px;
+  
 `;
 
-const RightContent = styled.div`
-  flex: 1;
-  text-align: right;
+const IntroductionTitle = styled.p`
+  font-size: 44px;
 `;
 
-const ButtonContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-`;
-
-const Button = styled.button`
-  display: inline-block;
-  padding: 0.65em 1.6em;
-  border: 3px solid #ffffff;
-  margin: 0 0.3em 0.3em 0;
-  border-radius: 0.12em;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  color: #ffffff;
-  text-align: center;
-  transition: all 0.2s;
-  animation: bn13bouncy 5s infinite linear;
-  position: relative;
+const Introduction = styled.p`
+  font-size: 16px;
 `;
 
 const Home = () => {
     return (
-        <Container_parent>
-            <Container_styled>
-                <LeftContent>
-                    {/* 왼쪽에 동그란 사진 */}
-                    <img src="/Users/apple/Documents/GitHub/Muzik_Service/public/favicon.ico" alt="Your Image" style={{ borderRadius: '50%', width: '150px', height: '150px' }} />
-                </LeftContent>
-                <RightContent>
-                    {/* 오른쪽에 글 */}
-                    <p>나를 소개할 수 있는 글 내용</p>
-                </RightContent>
-            </Container_styled>
-            <ButtonContainer>
-                <Container>
-                    <Row>
-                        <Col>
-                            <Button>버튼 1</Button>
-                        </Col>
-                        <Col>
-                            <Button>버튼 2</Button>
-                        </Col>
-                    </Row>
-                    <Partition></Partition>
-                    <Row>
-                        <Col>
-                            <Button>버튼 3</Button>
-                        </Col>
-                        <Col>
-                            <Button>버튼 4</Button>
-                        </Col>
-                    </Row>
-                </Container>
-            </ButtonContainer>
-        </Container_parent>
+        <ContainerParent>
+            <ProfileContent>
+                <ul className="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ImageBox src="/profile.jpeg"/>
+            </ProfileContent>
+            <TextContent>
+                <IntroductionTitle>
+                    Subin
+                </IntroductionTitle>
+                <Introduction>
+                    안녕하세요, 저는 클라이언트 개발자이며, 그래픽과 웹 프론트엔드에 큰 관심을 가지고 있는 사람입니다.<br/>
+                    웹 디자인과 사용자 경험을 개선하는 데 열정을 가지고 있습니다.
+                </Introduction>
+                <ImageStackContainer>
+                    <ImageStack src="/cicon.png"/>
+                    <ImageStack src="/js.png"/>
+                    <ImageStack src="/ts.png"/>
+                    <ImageStack src="/react_icon.png"/>
+                    <ImageStack src="/unityicon.png"/>
+                </ImageStackContainer>
+            </TextContent>
+        </ContainerParent>
 
     )
 };

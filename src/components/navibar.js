@@ -15,7 +15,7 @@ function TopBar() {
     };
 
     const customStyle = {
-        backgroundColor: 'oldlace', // 원하는 배경색으로 변경하세요
+
     };
 
     return (
@@ -24,7 +24,7 @@ function TopBar() {
             style={customStyle}
         >
             <Container>
-                <Navbar.Brand href="#home">Subin_Dev</Navbar.Brand>
+                <Navbar.Brand href="/">Subin_Dev</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
@@ -36,7 +36,7 @@ function TopBar() {
                             onMouseLeave={handleAboutMouseLeave}
                         >
                             <NavDropdown.Item
-                                href="https://www.muzik.click/"
+                                href="https://github.com/dmstjdhdh"
                             >SUBIN</NavDropdown.Item>
                             <NavDropdown.Item
                                 href="https://www.muzik.click/"
