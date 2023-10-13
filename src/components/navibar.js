@@ -15,7 +15,7 @@ function TopBar() {
     };
 
     const customStyle = {
-
+        background: 'white',
     };
 
     return (

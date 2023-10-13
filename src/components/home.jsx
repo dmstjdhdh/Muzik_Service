@@ -8,6 +8,17 @@ const ContainerParent = styled.div`
 `;
 
 const ProfileContent = styled.div`
+  background: #6b12ff;
+  background: -webkit-linear-gradient(to left, #5918ab, #570e69);
+
+  flex: 1;
+  width: 100%;
+  height: 325px;
+  align-items: center;
+  flex-direction: row;
+`;
+
+const PortfolioContent = styled.div`
   background: #845EC2;
   background: -webkit-linear-gradient(to left, #B39CD0, #FBEAFF);
 
@@ -16,6 +27,15 @@ const ProfileContent = styled.div`
   height: 100%;
   align-items: center;
   flex-direction: column;
+`;
+
+const Line = styled.div`
+  background: #8b49ff;
+
+  flex: 1;
+  width: 100%;
+  height: 2px;
+  margin-top: 1px;
 `;
 
 const ImageBox = styled.img`
@@ -42,10 +62,10 @@ const TextContent = styled.div`
   flex: 1;
   text-align: left;
   width: 100%;
-  height: 500px;
+  height: 360px;
   flex-direction: column;
   margin-left: 100px;
-  margin-top: 100px;
+  margin-top: 120px;
   
 `;
 
@@ -75,6 +95,8 @@ const Home = () => {
                 </ul>
                 <ImageBox src="/profile.jpeg"/>
             </ProfileContent>
+            <Line/>
+            <Line/>
             <TextContent>
                 <IntroductionTitle>
                     Subin
@@ -91,6 +113,9 @@ const Home = () => {
                     <ImageStack src="/unityicon.png"/>
                 </ImageStackContainer>
             </TextContent>
+            <PortfolioContent>
+
+            </PortfolioContent>
         </ContainerParent>
 
     )
