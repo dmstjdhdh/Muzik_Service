@@ -8,45 +8,39 @@ const ContainerParent = styled.div`
 `;
 
 const ProfileContent = styled.div`
-  background: #6b12ff;
+  background: #630afc;
   background: -webkit-linear-gradient(to left, #5918ab, #570e69);
 
   flex: 1;
-  width: 100%;
   height: 325px;
   align-items: center;
   flex-direction: row;
 `;
 
 const PortfolioContent = styled.div`
-  background: #845EC2;
+  background: #ffffff;
   background: -webkit-linear-gradient(to left, #B39CD0, #FBEAFF);
 
-  flex: 1;
-  width: 100%;
-  height: 100%;
+  display: flex;
+  justify-content: left;
   align-items: center;
-  flex-direction: column;
 `;
 
 const Line = styled.div`
   background: #8b49ff;
 
   flex: 1;
-  width: 100%;
-  height: 2px;
+  height: 1.5px;
   margin-top: 1px;
 `;
 
 const ImageBox = styled.img`
   flex: 1;
   border-radius: 150px;
-  width: 300px;
   height: 300px;
   margin-bottom: 100px;
   margin-top: 100px;
   margin-left: 100px;
-  z-index: 3;
 `
 
 const ImageStackContainer = styled.div`
@@ -61,12 +55,10 @@ const ImageStack = styled.img`
 const TextContent = styled.div`
   flex: 1;
   text-align: left;
-  width: 100%;
   height: 360px;
   flex-direction: column;
   margin-left: 100px;
   margin-top: 120px;
-  
 `;
 
 const IntroductionTitle = styled.p`
@@ -77,25 +69,31 @@ const Introduction = styled.p`
   font-size: 16px;
 `;
 
+const ImagePortfolio = styled.img`
+  border-radius: 20px;
+
+  margin-bottom: 100px;
+  margin-top: 100px;
+  margin-left: 120px;
+`
+const PortfolioContainer = styled.div`
+    margin-left: 100px;
+    margin-bottom: 30px;
+`
+const PortfolioTitle = styled.p`
+  font-size: 44px;
+`;
+
+const PortfolioText = styled.p`
+  font-size: 16px;
+`;
+
 const Home = () => {
     return (
         <ContainerParent>
             <ProfileContent>
-                <ul className="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
                 <ImageBox src="/profile.jpeg"/>
             </ProfileContent>
-            <Line/>
             <Line/>
             <TextContent>
                 <IntroductionTitle>
@@ -114,7 +112,19 @@ const Home = () => {
                 </ImageStackContainer>
             </TextContent>
             <PortfolioContent>
-
+                <ImagePortfolio src="/portfolioImg/chungang.png"/>
+                <PortfolioContainer>
+                    <PortfolioTitle>
+                        중앙대학교 소프트웨어학부 20학번
+                    </PortfolioTitle>
+                    <PortfolioText>
+                        2020년 입학 , 2025년 졸업 예정
+                        <br/>
+                        현재 3학년 복학 예정, 총 학점평균 3.77/4.5
+                        <br/>
+                        ZeroPage 준회원
+                    </PortfolioText>
+                </PortfolioContainer>
             </PortfolioContent>
         </ContainerParent>
 

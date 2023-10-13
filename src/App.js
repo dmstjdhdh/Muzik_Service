@@ -5,9 +5,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import TopBar from "./components/navibar";
 
 const Container = styled.div`
-  background-color: #ecedee;
+  background-color: rgb(0, 0, 0);
   padding: 0;
   margin: 0;
+  width: 100%;
 `;
 
 function App() {
