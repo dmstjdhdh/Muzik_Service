@@ -1,22 +1,17 @@
 import './App.css';
-import styled from "styled-components";
-import Home from "./components/home";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import TopBar from "./components/navibar";
-
-const Container = styled.div`
-  background-color: rgb(0, 0, 0);
-  padding: 0;
-  margin: 0;
-  width: 100%;
-`;
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import LoginPage from "./components/LoginPage";
+import HomePage from "./components/HomePage";
 
 function App() {
   return (
-      <Container>
-          <TopBar/>
-          <Home/>
-      </Container>
+      <BrowserRouter>
+          <Routes>
+              <Route path="/" element={<LoginPage/>}/>
+              <Route path="/home" element={<HomePage/>}/>
+          </Routes>
+      </BrowserRouter>
   );
 }
 
